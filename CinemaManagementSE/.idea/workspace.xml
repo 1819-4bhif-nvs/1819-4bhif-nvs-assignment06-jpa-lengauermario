@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b192029-2465-4a27-abcb-ed3be4770690" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CinemaManagementRestEE/cinemamanagement.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CinemaManagementRestEE/src/main/java/at/htl/cinemamanagement/rest/CustomerEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CinemaManagementRestEE/src/main/java/at/htl/cinemamanagement/rest/EmployeeEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CinemaManagementRestEE/src/main/java/at/htl/cinemamanagement/rest/HallEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CinemaManagementSE.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/CinemaEnpointIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/CustomerEndpointIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/EmployeeEndpointIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/HallEndpointIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CinemaManagementRestEE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CinemaManagementRestEE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+            <state relative-caret-position="1037">
+              <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -58,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/CinemaEnpointIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="61" column="51" lean-forward="true" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+            <state relative-caret-position="731">
+              <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,20 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/HallEndpointIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/CustomerEndpointIT.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="68" />
+            <state relative-caret-position="493">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,10 +63,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/CustomerEndpointIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="841">
+              <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/EmployeeEndpointIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="850">
+              <caret line="63" column="67" selection-start-line="63" selection-start-column="67" selection-end-line="63" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,7 +126,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -155,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,14 +176,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544299360753" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544305204337" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -323,23 +306,12 @@
       <workItem from="1543668000184" duration="3589000" />
       <workItem from="1543827546899" duration="3872000" />
       <workItem from="1544097924514" duration="3193000" />
-      <workItem from="1544283815117" duration="13758000" />
+      <workItem from="1544283815117" duration="14410000" />
+      <workItem from="1544373283259" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmployeeEndpointIT_crud - 2018.12.08 at 20h 31m 20s.xml">
-      <configuration name="EmployeeEndpointIT.crud" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeEndpointIT_crud - 2018.12.08 at 20h 31m 37s.xml">
-      <configuration name="EmployeeEndpointIT.crud" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerEndpointIT - 2018.12.08 at 20h 31m 48s.xml">
-      <configuration name="CustomerEndpointIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerEndpointIT_crud - 2018.12.08 at 20h 32m 40s.xml">
-      <configuration name="CustomerEndpointIT.crud" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CustomerEndpointIT_crud - 2018.12.08 at 20h 33m 05s.xml">
       <configuration name="CustomerEndpointIT.crud" configurationId="JUnit" />
     </history-entry>
@@ -358,14 +330,26 @@
     <history-entry file="CinemaEnpointIT_and_3_more - 2018.12.08 at 20h 40m 32s.xml">
       <configuration name="CinemaEnpointIT and 3 more" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CinemaEnpointIT_crud - 2018.12.08 at 21h 01m 57s.xml">
+      <configuration name="CinemaEnpointIT.crud" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CinemaEnpointIT_crud - 2018.12.08 at 21h 02m 01s.xml">
+      <configuration name="CinemaEnpointIT.crud" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerEndpointIT_crud - 2018.12.08 at 21h 02m 39s.xml">
+      <configuration name="CustomerEndpointIT.crud" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerEndpointIT_crud - 2018.12.08 at 21h 02m 42s.xml">
+      <configuration name="CustomerEndpointIT.crud" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24412000" />
+    <option name="totallyTimeSpent" value="25072000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12100213" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.122068234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -374,7 +358,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -437,13 +421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -476,20 +453,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/CinemaEnpointIT.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="61" column="51" lean-forward="true" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1037">
+          <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/CustomerEndpointIT.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/CinemaEnpointIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="68" />
+        <state relative-caret-position="731">
+          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -498,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/HallEndpointIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="493">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -508,8 +482,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/EmployeeEndpointIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="850">
+          <caret line="63" column="67" selection-start-line="63" selection-start-column="67" selection-end-line="63" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/at/htl/cinemamanagement/rest/CustomerEndpointIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
