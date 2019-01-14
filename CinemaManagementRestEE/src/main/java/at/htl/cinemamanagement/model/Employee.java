@@ -12,14 +12,19 @@ public class Employee extends Person{
     private double personalNumber;
     private LocalDate employedSince;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Cinema cinema;
+
     public Employee() {
     }
 
+
     public Employee(String firstName, String lastName, String address, LocalDate birthday, String email, String phoneNumber, Cinema cinema, double salary, double personalNumber, LocalDate employedSince) {
-        super(firstName, lastName, address, birthday, email, phoneNumber, cinema);
+        super(firstName, lastName, address, birthday, email, phoneNumber);
         this.salary = salary;
         this.personalNumber = personalNumber;
         this.employedSince = employedSince;
+        this.cinema = cinema;
     }
 
     public double getSalary() {
@@ -44,5 +49,13 @@ public class Employee extends Person{
 
     public void setEmployedSince(LocalDate employedSince) {
         this.employedSince = employedSince;
+    }
+
+    public Cinema getCinema() {
+        return cinema;
+    }
+
+    public void setCinema(Cinema cinema) {
+        this.cinema = cinema;
     }
 }

@@ -1,7 +1,7 @@
 # Projekt Kinoverwaltung
 
 CLD <br>
-![CLD][CLD.png]
+![CLD][CLD.JPG]
 
 ERD <br>
-![CLD][CLD.png]
+![ERD][ERD.PNG]

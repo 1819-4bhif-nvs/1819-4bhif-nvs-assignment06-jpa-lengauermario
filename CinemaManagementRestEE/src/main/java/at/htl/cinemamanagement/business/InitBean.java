@@ -35,8 +35,8 @@ public class InitBean {
         persons.add(new Employee("Max", "Huber", "Maxstraße 12, 4040 Linz", LocalDate.of(1973,6,12), "max.huber@gmx.at", "066077006559", cineplexLinz, 3500, 23098, LocalDate.of(2005, 2,1)));
         persons.add(new Employee("Stefan", "Mustermann", "Wienerstraße 20, 4040 Linz", LocalDate.of(1978,3,22), "stefan.mustermann@gmx.at", "066033648665", cineplexLinz, 2400, 98043, LocalDate.of(2010, 5,1)));
         persons.add(new Employee("Rene", "Holzer", "SalzburgerStraße 8, 4040 Linz", LocalDate.of(1976,9,9), "rene.holzer@gmx.at", "06609988877", cineplexLinz,4000, 76873, LocalDate.of(2001, 3,1)));
-        persons.add(new Customer("Thomas", "Egger", "SalzburgerStraße 20, 4040 Linz", LocalDate.of(2001,12,19), "thomas.egger@gmx.at", "06609933361",cineplexLinz, 1000, 100));
-        persons.add(new Customer("Roman", "Wallner", "Thallingerweg 28, 4040 Linz", LocalDate.of(1999,4,16), "roman.wallner@gmx.at", "06608397737",cineplexLinz, 1001, 450));
+        persons.add(new Customer("Thomas", "Egger", "SalzburgerStraße 20, 4040 Linz", LocalDate.of(2001,12,19), "thomas.egger@gmx.at", "06609933361", 1000, 100));
+        persons.add(new Customer("Roman", "Wallner", "Thallingerweg 28, 4040 Linz", LocalDate.of(1999,4,16), "roman.wallner@gmx.at", "06608397737", 1001, 450));
         //cineplexLinz.setHalls(halls);
         //cineplexLinz.setPersonList(persons);
         entityManager.persist(cineplexLinz);
@@ -54,8 +54,8 @@ public class InitBean {
         persons.add(new Employee("Markus", "Graf", "Landhausgasse 12, 8010 Innere Stadt", LocalDate.of(1973,6,12), "markus.graf@gmx.at", "066077006559", cineplexGraz, 3500, 23098, LocalDate.of(2005, 2,1)));
         persons.add(new Employee("Lorenz", "Mair", "Raubergasse 20, 8010 Innere Stadt", LocalDate.of(1978,3,22), "lorenz.mair@gmx.at", "066033648665",cineplexGraz, 2400, 98043, LocalDate.of(2010, 5,1)));
         persons.add(new Employee("Samuel", "Lehner", "Joaneneumring 8, 8010 Innere Stadt", LocalDate.of(1976,9,9), "samuel.lehner@gmx.at", "06609988877",cineplexGraz, 4000, 76873, LocalDate.of(2001, 3,1)));
-        persons.add(new Customer("Anton", "Wieser", "Kaiserfeldgasse 20, 8010 Innere Stadt", LocalDate.of(2001,12,19), "anton.wieder@gmx.at", "06609933361",cineplexGraz, 1000, 100));
-        persons.add(new Customer("Liam", "Reiter", "Bischofplatz 28, 8010 Innere Stadt", LocalDate.of(1999,4,16), "liam.reiter@gmx.at", "06608397737",cineplexGraz, 1001, 450));
+        persons.add(new Customer("Anton", "Wieser", "Kaiserfeldgasse 20, 8010 Innere Stadt", LocalDate.of(2001,12,19), "anton.wieder@gmx.at", "06609933361", 1000, 100));
+        persons.add(new Customer("Liam", "Reiter", "Bischofplatz 28, 8010 Innere Stadt", LocalDate.of(1999,4,16), "liam.reiter@gmx.at", "06608397737", 1001, 450));
         //cineplexGraz.setHalls(halls);
         //cineplexLinz.setPersonList(persons);
         entityManager.persist(cineplexGraz);

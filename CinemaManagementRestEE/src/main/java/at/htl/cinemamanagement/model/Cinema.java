@@ -16,24 +16,26 @@ public class Cinema {
 
     private String name;
     private String address;
-    private LocalDate inventionDate;
+    private LocalDate founded;
 
 
     @OneToMany(mappedBy = "cinema")
     @JsonbTransient
     private List<Hall> halls;
 
-    @OneToMany
+    @OneToMany(mappedBy = "cinema",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
     @JsonbTransient
-    private List<Person> personList;
+    private List<Employee> employees;
 
     public Cinema() {
     }
 
-    public Cinema(String name, String address, LocalDate inventionDate) {
+    public Cinema(String name, String address, LocalDate founded) {
         this.name = name;
         this.address = address;
-        this.inventionDate = inventionDate;
+        this.founded = founded;
     }
 
     public Long getId() {
@@ -60,12 +62,12 @@ public class Cinema {
         this.address = address;
     }
 
-    public LocalDate getInventionDate() {
-        return inventionDate;
+    public LocalDate getFounded() {
+        return founded;
     }
 
-    public void setInventionDate(LocalDate inventionDate) {
-        this.inventionDate = inventionDate;
+    public void setFounded(LocalDate founded) {
+        this.founded = founded;
     }
 
     public List<Hall> getHalls() {
@@ -76,11 +78,11 @@ public class Cinema {
         this.halls = halls;
     }
 
-    public List<Person> getPersonList() {
-        return personList;
+    public List<Employee> getEmployees() {
+        return employees;
     }
 
-    public void setPersonList(List<Person> personList) {
-        this.personList = personList;
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
     }
 }

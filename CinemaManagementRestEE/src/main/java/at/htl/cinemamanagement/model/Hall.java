@@ -1,6 +1,7 @@
 package at.htl.cinemamanagement.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @NamedQuery(name = "Hall.findAll", query = "select h from Hall h")
@@ -15,6 +16,8 @@ public class Hall {
 
     @ManyToOne (cascade = CascadeType.ALL)
     private Cinema cinema;
+    @OneToMany (cascade = CascadeType.ALL, mappedBy = "hall")
+    private List<Presentation> presentations;
 
     public Hall() {
     }
@@ -55,5 +58,13 @@ public class Hall {
 
     public void setCinema(Cinema cinema) {
         this.cinema = cinema;
+    }
+
+    public List<Presentation> getPresentations() {
+        return presentations;
+    }
+
+    public void setPresentations(List<Presentation> presentations) {
+        this.presentations = presentations;
     }
 }

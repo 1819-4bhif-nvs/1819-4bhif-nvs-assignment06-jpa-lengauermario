@@ -19,257 +19,330 @@
     <schema id="11" parent="1" name="SYSPROC"/>
     <schema id="12" parent="1" name="SYSSTAT"/>
     <table id="13" parent="2" name="CINEMA"/>
-    <table id="14" parent="2" name="CINEMA_PERSON"/>
-    <table id="15" parent="2" name="CUSTOMER"/>
-    <table id="16" parent="2" name="EMPLOYEE"/>
-    <table id="17" parent="2" name="HALL"/>
+    <table id="14" parent="2" name="CUSTOMER"/>
+    <table id="15" parent="2" name="EMPLOYEE"/>
+    <table id="16" parent="2" name="HALL"/>
+    <table id="17" parent="2" name="MOVIE"/>
     <table id="18" parent="2" name="PERSON"/>
-    <column id="19" parent="13" name="ID">
+    <table id="19" parent="2" name="PRESENTATION"/>
+    <table id="20" parent="2" name="TICKET"/>
+    <column id="21" parent="13" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="20" parent="13" name="ADDRESS">
+    <column id="22" parent="13" name="ADDRESS">
       <Position>2</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="21" parent="13" name="INVENTIONDATE">
+    <column id="23" parent="13" name="FOUNDED">
       <Position>3</Position>
       <DataType>DATE|91s</DataType>
     </column>
-    <column id="22" parent="13" name="NAME">
+    <column id="24" parent="13" name="NAME">
       <Position>4</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <index id="23" parent="13" name="SQL181208202632570">
+    <index id="25" parent="13" name="SQL190114141149900">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="24" parent="13" name="SQL181208202632570">
+    <key id="26" parent="13" name="SQL190114141149900">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="25" parent="14" name="CINEMA_ID">
-      <Position>1</Position>
-      <DataType>BIGINT|-5s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="26" parent="14" name="PERSONLIST_ID">
-      <Position>2</Position>
-      <DataType>BIGINT|-5s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="27" parent="14" name="SQL181208202956850">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>PERSONLIST_ID</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="28" parent="14" name="SQL181208202956871">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>CINEMA_ID</ColNames>
-    </index>
-    <index id="29" parent="14" name="SQL181208202956870">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>PERSONLIST_ID</ColNames>
-    </index>
-    <key id="30" parent="14" name="SQL181208202956850">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>PERSONLIST_ID</ColNames>
-    </key>
-    <foreign-key id="31" parent="14" name="FKLRDMYHTHOKI75SVKRH2BNX3FQ">
-      <ColNames>CINEMA_ID</ColNames>
-      <RefSchemaName>APP</RefSchemaName>
-      <RefTableName>CINEMA</RefTableName>
-      <RefKeyName>SQL181208202632570</RefKeyName>
-      <RefColNames>ID</RefColNames>
-    </foreign-key>
-    <foreign-key id="32" parent="14" name="FKG1AT0WBUK8EI986EK8W8A4U6B">
-      <ColNames>PERSONLIST_ID</ColNames>
-      <RefSchemaName>APP</RefSchemaName>
-      <RefTableName>PERSON</RefTableName>
-      <RefKeyName>SQL181208202956820</RefKeyName>
-      <RefColNames>ID</RefColNames>
-    </foreign-key>
-    <column id="33" parent="15" name="BONUSPOINTS">
+    <column id="27" parent="14" name="BONUSPOINTS">
       <Position>1</Position>
       <DataType>INTEGER|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="34" parent="15" name="CUSTOMERNUMBER">
+    <column id="28" parent="14" name="CUSTOMERNUMBER">
       <Position>2</Position>
       <DataType>DOUBLE|8s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="35" parent="15" name="ID">
+    <column id="29" parent="14" name="ID">
       <Position>3</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="36" parent="15" name="SQL181208202956750">
+    <index id="30" parent="14" name="SQL190114141149950">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="37" parent="15" name="SQL181208202956890">
+    <index id="31" parent="14" name="SQL190114141150140">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
     </index>
-    <key id="38" parent="15" name="SQL181208202956750">
+    <key id="32" parent="14" name="SQL190114141149950">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="39" parent="15" name="FKTLSBE8659XWQDI2087J3Q2TIU">
+    <foreign-key id="33" parent="14" name="FKTLSBE8659XWQDI2087J3Q2TIU">
       <ColNames>ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>PERSON</RefTableName>
-      <RefKeyName>SQL181208202956820</RefKeyName>
+      <RefKeyName>SQL190114141150070</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="40" parent="16" name="EMPLOYEDSINCE">
+    <column id="34" parent="15" name="EMPLOYEDSINCE">
       <Position>1</Position>
       <DataType>DATE|91s</DataType>
     </column>
-    <column id="41" parent="16" name="PERSONALNUMBER">
+    <column id="35" parent="15" name="PERSONALNUMBER">
       <Position>2</Position>
       <DataType>DOUBLE|8s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="42" parent="16" name="SALARY">
+    <column id="36" parent="15" name="SALARY">
       <Position>3</Position>
       <DataType>DOUBLE|8s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="43" parent="16" name="ID">
+    <column id="37" parent="15" name="ID">
       <Position>4</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="44" parent="16" name="SQL181208202956780">
+    <column id="38" parent="15" name="CINEMA_ID">
+      <Position>5</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <index id="39" parent="15" name="SQL190114141149990">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="45" parent="16" name="SQL181208202956891">
+    <index id="40" parent="15" name="SQL190114141150160">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
     </index>
-    <key id="46" parent="16" name="SQL181208202956780">
+    <index id="41" parent="15" name="SQL190114141150141">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CINEMA_ID</ColNames>
+    </index>
+    <key id="42" parent="15" name="SQL190114141149990">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="47" parent="16" name="FKR93NRD2E64PTRN7R8BI1ND0OL">
+    <foreign-key id="43" parent="15" name="FKR93NRD2E64PTRN7R8BI1ND0OL">
       <ColNames>ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>PERSON</RefTableName>
-      <RefKeyName>SQL181208202956820</RefKeyName>
+      <RefKeyName>SQL190114141150070</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="48" parent="17" name="ID">
+    <foreign-key id="44" parent="15" name="FKO3MEWI5ETCBJVCYL56FIEQKHP">
+      <ColNames>CINEMA_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>CINEMA</RefTableName>
+      <RefKeyName>SQL190114141149900</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="45" parent="16" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="49" parent="17" name="NAME">
+    <column id="46" parent="16" name="NAME">
       <Position>2</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="50" parent="17" name="SEATING">
+    <column id="47" parent="16" name="SEATING">
       <Position>3</Position>
       <DataType>INTEGER|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="17" name="CINEMA_ID">
+    <column id="48" parent="16" name="CINEMA_ID">
       <Position>4</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <index id="52" parent="17" name="SQL181208202632680">
+    <index id="49" parent="16" name="SQL190114141150020">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="53" parent="17" name="SQL181208202956892">
+    <index id="50" parent="16" name="SQL190114141150170">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CINEMA_ID</ColNames>
     </index>
-    <key id="54" parent="17" name="SQL181208202632680">
+    <key id="51" parent="16" name="SQL190114141150020">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="55" parent="17" name="FK38TPCVUT2RA2IPBB6795EXD12">
+    <foreign-key id="52" parent="16" name="FK38TPCVUT2RA2IPBB6795EXD12">
       <ColNames>CINEMA_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
       <RefTableName>CINEMA</RefTableName>
-      <RefKeyName>SQL181208202632570</RefKeyName>
+      <RefKeyName>SQL190114141149900</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
-    <column id="56" parent="18" name="DTYPE">
+    <column id="53" parent="17" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
+    </column>
+    <column id="54" parent="17" name="DATEOFAPPEARANCE">
+      <Position>2</Position>
+      <DataType>TIMESTAMP|93s</DataType>
+    </column>
+    <column id="55" parent="17" name="TITLE">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="56" parent="17" name="SQL190114141150050">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="17" name="SQL190114141150050">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="18" name="DTYPE">
       <Position>1</Position>
       <DataType>VARCHAR(31)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="57" parent="18" name="ID">
+    <column id="59" parent="18" name="ID">
       <Position>2</Position>
       <DataType>BIGINT|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
     </column>
-    <column id="58" parent="18" name="ADDRESS">
+    <column id="60" parent="18" name="ADDRESS">
       <Position>3</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="59" parent="18" name="BIRTHDAY">
+    <column id="61" parent="18" name="BIRTHDAY">
       <Position>4</Position>
       <DataType>DATE|91s</DataType>
     </column>
-    <column id="60" parent="18" name="EMAIL">
+    <column id="62" parent="18" name="EMAIL">
       <Position>5</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="61" parent="18" name="FIRSTNAME">
+    <column id="63" parent="18" name="FIRSTNAME">
       <Position>6</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="62" parent="18" name="LASTNAME">
+    <column id="64" parent="18" name="LASTNAME">
       <Position>7</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="63" parent="18" name="PHONENUMBER">
+    <column id="65" parent="18" name="PHONENUMBER">
       <Position>8</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="64" parent="18" name="CINEMA_ID">
-      <Position>9</Position>
-      <DataType>BIGINT|-5s</DataType>
-    </column>
-    <index id="65" parent="18" name="SQL181208202956820">
+    <index id="66" parent="18" name="SQL190114141150070">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="66" parent="18" name="SQL181208202956910">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>CINEMA_ID</ColNames>
-    </index>
-    <key id="67" parent="18" name="SQL181208202956820">
+    <key id="67" parent="18" name="SQL190114141150070">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="68" parent="18" name="FKGYPKGL450DGJPEAJONK9CH2KK">
-      <ColNames>CINEMA_ID</ColNames>
+    <column id="68" parent="19" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>GENERATED_BY_DEFAULT</DefaultExpression>
+    </column>
+    <column id="69" parent="19" name="ENDTIME">
+      <Position>2</Position>
+      <DataType>TIMESTAMP|93s</DataType>
+    </column>
+    <column id="70" parent="19" name="STARTTIME">
+      <Position>3</Position>
+      <DataType>TIMESTAMP|93s</DataType>
+    </column>
+    <column id="71" parent="19" name="HALL_ID">
+      <Position>4</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <column id="72" parent="19" name="MOVIE_ID">
+      <Position>5</Position>
+      <DataType>BIGINT|-5s</DataType>
+    </column>
+    <index id="73" parent="19" name="SQL190114141150090">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="74" parent="19" name="SQL190114141150190">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>HALL_ID</ColNames>
+    </index>
+    <index id="75" parent="19" name="SQL190114141150210">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MOVIE_ID</ColNames>
+    </index>
+    <key id="76" parent="19" name="SQL190114141150090">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="77" parent="19" name="FK32CC0JUTY487PT4DYG5WENLTN">
+      <ColNames>HALL_ID</ColNames>
       <RefSchemaName>APP</RefSchemaName>
-      <RefTableName>CINEMA</RefTableName>
-      <RefKeyName>SQL181208202632570</RefKeyName>
+      <RefTableName>HALL</RefTableName>
+      <RefKeyName>SQL190114141150020</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="78" parent="19" name="FK9XPE9RAIU8GN8TNKX7UX15LKN">
+      <ColNames>MOVIE_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>MOVIE</RefTableName>
+      <RefKeyName>SQL190114141150050</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="79" parent="20" name="PRESENTATIONS_ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="20" name="CUSTOMERS_ID">
+      <Position>2</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="81" parent="20" name="SQL190114141150260">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRESENTATIONS_ID</ColNames>
+    </index>
+    <index id="82" parent="20" name="SQL190114141150240">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CUSTOMERS_ID</ColNames>
+    </index>
+    <foreign-key id="83" parent="20" name="FK6S8Q19I3EFA2ROO8HT2PB3WUM">
+      <ColNames>PRESENTATIONS_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>PRESENTATION</RefTableName>
+      <RefKeyName>SQL190114141150090</RefKeyName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="84" parent="20" name="FKMYO4MM1X0OA6I6UASO1X5U9IY">
+      <ColNames>CUSTOMERS_ID</ColNames>
+      <RefSchemaName>APP</RefSchemaName>
+      <RefTableName>CUSTOMER</RefTableName>
+      <RefKeyName>SQL190114141149950</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
   </database-model>

@@ -18,20 +18,18 @@ public class Person {
     private String email;
     private String phoneNumber;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Cinema cinema;
+
 
     public Person() {
     }
 
-    public Person(String firstName, String lastName, String address, LocalDate birthday, String email, String phoneNumber, Cinema cinema) {
+    public Person(String firstName, String lastName, String address, LocalDate birthday, String email, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.birthday = birthday;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.cinema = cinema;
     }
 
     public Long getId() {
@@ -90,11 +88,4 @@ public class Person {
         this.phoneNumber = phoneNumber;
     }
 
-    public Cinema getCinema() {
-        return cinema;
-    }
-
-    public void setCinema(Cinema cinema) {
-        this.cinema = cinema;
-    }
 }
