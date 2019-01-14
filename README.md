@@ -1,7 +1,6 @@
-# Projekt Kinoverwaltung
+# Projekt Kinoverwaltung (Mario Lengauer)
+## CLD <br>
+![CLD](CLD.JPG)
 
-CLD <br>
-![CLD][CLD.JPG]
-
-ERD <br>
-![ERD][ERD.PNG]
+## ERD <br>
+![ERD](ERD.JPG)
