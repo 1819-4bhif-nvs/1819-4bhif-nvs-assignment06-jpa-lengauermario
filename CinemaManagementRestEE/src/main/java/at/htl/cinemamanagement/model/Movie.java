@@ -1,6 +1,9 @@
 package at.htl.cinemamanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -12,7 +15,15 @@ public class Movie {
     private Long id;
 
     private String title;
-    private Date dateOfAppearance;
+    private String dateOfAppearance;
+
+    public Movie() {
+    }
+
+    public Movie(String title, String dateOfAppearance) {
+        this.title = title;
+        this.dateOfAppearance = dateOfAppearance;
+    }
 
     public Long getId() {
         return id;
@@ -30,11 +41,11 @@ public class Movie {
         this.title = title;
     }
 
-    public Date getDateOfAppearance() {
+    public String getDateOfAppearance() {
         return dateOfAppearance;
     }
 
-    public void setDateOfAppearance(Date dateOfAppearance) {
+    public void setDateOfAppearance(String dateOfAppearance) {
         this.dateOfAppearance = dateOfAppearance;
     }
 

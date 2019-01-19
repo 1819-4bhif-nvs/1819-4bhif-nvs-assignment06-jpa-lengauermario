@@ -6,6 +6,7 @@ import org.junit.Test;
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
+import javax.print.attribute.standard.Media;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
@@ -35,12 +36,12 @@ public class CinemaEnpointIT {
         JsonObject cinemaJson = Json.createObjectBuilder()
                 .add("name", "Cineplex Klagenfurt")
                 .add("address", "Sonnsteinweg 12, 9063 Klagenfurt")
-                .add("inventionDate", "2001-12-12")
+                .add("founded", "2001-12-12")
                 .build();
 
         this.target = client.target("http://localhost:8080/cinemamanagement/API/cinema/insert");
         Response response = this.target
-                .request()
+                .request(MediaType.APPLICATION_JSON)
                 .post(Entity.json(cinemaJson));
 
         JsonObject entity = response.readEntity(JsonObject.class);
@@ -49,7 +50,7 @@ public class CinemaEnpointIT {
         int id = entity.getInt("id");
         System.out.println(id);
         assertThat(entity.getString("name"), is("Cineplex Klagenfurt"));
-        assertThat(entity.getString("inventionDate"), is("2001-12-12"));
+        assertThat(entity.getString("founded"), is("2001-12-12"));
 
         //Get
         this.target = client.target("http://localhost:8080/cinemamanagement/API/cinema/"+id);
@@ -61,10 +62,10 @@ public class CinemaEnpointIT {
         cinemaJson = Json.createObjectBuilder()
                 .add("name", "Cineplex Klagenfurt")
                 .add("address", "Sonnsteinweg 12-16, 9063 Klagenfurt")
-                .add("inventionDate", "2001-12-12")
+                .add("founded", "2001-12-12")
                 .build();
 
-        response = target.request()
+        response = target.request(MediaType.APPLICATION_JSON)
                 .put(Entity.json(cinemaJson));
         entity = response.readEntity(JsonObject.class);
         assertThat(entity.getString("address"), is("Sonnsteinweg 12-16, 9063 Klagenfurt"));

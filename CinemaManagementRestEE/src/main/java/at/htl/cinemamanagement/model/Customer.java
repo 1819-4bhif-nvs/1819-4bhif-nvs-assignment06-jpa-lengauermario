@@ -1,5 +1,8 @@
 package at.htl.cinemamanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
@@ -10,7 +13,8 @@ public class Customer extends Person {
     private double customerNumber;
     private int bonuspoints;
 
-    @ManyToMany(mappedBy = "customers")
+    @ManyToMany(mappedBy = "customers", fetch = FetchType.EAGER)
+    @JsonbTransient
     private List<Presentation> presentations;
 
     public Customer() {

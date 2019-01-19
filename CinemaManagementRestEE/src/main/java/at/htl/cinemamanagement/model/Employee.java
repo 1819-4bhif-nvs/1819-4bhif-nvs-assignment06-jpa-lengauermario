@@ -1,6 +1,7 @@
 package at.htl.cinemamanagement.model;
 
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -12,7 +13,10 @@ public class Employee extends Person{
     private double personalNumber;
     private LocalDate employedSince;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
+    @JsonbTransient
     private Cinema cinema;
 
     public Employee() {

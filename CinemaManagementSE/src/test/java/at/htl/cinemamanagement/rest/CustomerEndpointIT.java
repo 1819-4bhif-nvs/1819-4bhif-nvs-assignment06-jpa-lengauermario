@@ -34,11 +34,6 @@ public class CustomerEndpointIT {
                 .add("birthday", "1973-12-16")
                 .add("email", "max.mustermann@muster.de")
                 .add("phonenumber", "+43 660665558808")
-                .add("cinema", Json.createObjectBuilder()
-                        .add("name", "Cineplex Linz")
-                        .add("address", "Prinz-Eugen-Straße 22, 4020 Linz")
-                        .add("inventionDate", "1999-12-08")
-                )
                 .add("customerNumber", 5000)
                 .add("bonuspoints", 200)
                 .build();

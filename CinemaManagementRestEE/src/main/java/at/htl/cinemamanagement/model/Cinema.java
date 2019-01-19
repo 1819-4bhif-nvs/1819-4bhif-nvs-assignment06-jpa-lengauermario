@@ -19,13 +19,13 @@ public class Cinema {
     private LocalDate founded;
 
 
-    @OneToMany(mappedBy = "cinema")
+    @OneToMany(mappedBy = "cinema", fetch = FetchType.LAZY)
     @JsonbTransient
     private List<Hall> halls;
 
     @OneToMany(mappedBy = "cinema",
             cascade = CascadeType.ALL,
-            orphanRemoval = true)
+            fetch = FetchType.LAZY)
     @JsonbTransient
     private List<Employee> employees;
 

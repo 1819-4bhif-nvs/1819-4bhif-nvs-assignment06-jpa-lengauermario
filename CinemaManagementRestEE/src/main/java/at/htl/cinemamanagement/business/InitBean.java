@@ -8,6 +8,7 @@ import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,5 +62,14 @@ public class InitBean {
         entityManager.persist(cineplexGraz);
         for (Hall hall : halls) entityManager.persist(hall);
         for (Person person : persons) entityManager.persist(person);
+
+        Movie movie = new Movie("Hobbit",LocalDate.of(2001,12,19).toString() );
+        Presentation presentation = new Presentation(
+                LocalDateTime.of(2018,12,19, 12,15,0).toString(),
+                LocalDateTime.of(2018,12,19, 12,15,0).toString(),
+                halls.get(0), movie, null);
+
+        entityManager.persist(movie);
+        entityManager.persist(presentation);
     }
 }

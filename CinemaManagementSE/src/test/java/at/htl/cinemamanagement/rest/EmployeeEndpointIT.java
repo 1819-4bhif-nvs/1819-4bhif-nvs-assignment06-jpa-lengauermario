@@ -37,7 +37,7 @@ public class EmployeeEndpointIT {
                 .add("cinema", Json.createObjectBuilder()
                         .add("name", "Cineplex Linz")
                         .add("address", "Prinz-Eugen-Straße 22, 4020 Linz")
-                        .add("inventionDate", "1999-12-08")
+                        .add("founded", "1999-12-08")
                 )
                 .add("salary", 5000)
                 .add("personalNumber", 200)
@@ -46,7 +46,7 @@ public class EmployeeEndpointIT {
 
         this.target = client.target("http://localhost:8080/cinemamanagement/API/employee/insert");
         Response response = this.target
-                .request()
+                .request(MediaType.APPLICATION_JSON)
                 .post(Entity.json(employeeJson));
 
         JsonObject entity = response.readEntity(JsonObject.class);
@@ -59,7 +59,9 @@ public class EmployeeEndpointIT {
 
         //Get
         this.target = client.target("http://localhost:8080/cinemamanagement/API/employee/"+id);
-        JsonObject cinema = this.target.request(MediaType.APPLICATION_JSON).get(JsonObject.class);
+        JsonObject cinema = this.target
+                .request(MediaType.APPLICATION_JSON)
+                .get(JsonObject.class);
         assertThat(cinema.getString("firstName"), is("Max"));
         assertThat(cinema.getString("lastName"), is("Mustermann"));
 
@@ -75,14 +77,14 @@ public class EmployeeEndpointIT {
                 .add("cinema", Json.createObjectBuilder()
                         .add("name", "Cineplex Linz")
                         .add("address", "Prinz-Eugen-Straße 22, 4020 Linz")
-                        .add("inventionDate", "1999-12-08")
+                        .add("founded", "1999-12-08")
                 )
                 .add("salary", 5000)
                 .add("personalNumber", 200)
                 .add("employedSince", "2010-08-15")
                 .build();
 
-        response = target.request()
+        response = target.request(MediaType.APPLICATION_JSON)
                 .put(Entity.json(employeeJson));
         entity = response.readEntity(JsonObject.class);
         assertThat(entity.getString("firstName"), is("Maximilian"));

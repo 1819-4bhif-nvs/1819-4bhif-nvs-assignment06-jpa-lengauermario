@@ -1,6 +1,10 @@
 package at.htl.cinemamanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.List;
 
 @Entity
@@ -14,9 +18,17 @@ public class Hall {
     private String name;
     private int seating;
 
-    @ManyToOne (cascade = CascadeType.ALL)
+    @ManyToOne (cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnore
+    @XmlTransient
     private Cinema cinema;
-    @OneToMany (cascade = CascadeType.ALL, mappedBy = "hall")
+
+    @OneToMany (cascade = CascadeType.ALL,
+            mappedBy = "hall",
+            fetch = FetchType.LAZY
+    )
+    @JsonIgnore
+    @XmlTransient
     private List<Presentation> presentations;
 
     public Hall() {

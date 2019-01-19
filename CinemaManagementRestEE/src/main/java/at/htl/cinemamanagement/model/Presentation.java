@@ -1,5 +1,8 @@
 package at.htl.cinemamanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -11,26 +14,36 @@ public class Presentation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+ /*   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime startTime;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime endTime;
-
-    @ManyToOne(cascade = CascadeType.ALL)
+*/
+    private String startTime;
+    private String endTime;
+    @ManyToOne(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER
+    )
     private Hall hall;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER
+    )
     private Movie movie;
 
-    @ManyToMany(cascade = {
-            CascadeType.PERSIST,
-            CascadeType.MERGE
-    })
+    @ManyToMany(
+            cascade = CascadeType.REMOVE,
+            fetch = FetchType.EAGER)
     @JoinTable(name = "ticket")
+    @JsonbTransient
     private List<Customer> customers;
 
     public Presentation() {
     }
 
-    public Presentation(LocalDateTime startTime, LocalDateTime endTime, Hall hall, Movie movie, List<Customer> customers) {
+    public Presentation(String startTime, String endTime, Hall hall, Movie movie, List<Customer> customers) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.hall = hall;
@@ -46,19 +59,19 @@ public class Presentation {
         this.id = id;
     }
 
-    public LocalDateTime getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(LocalDateTime startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
-    public LocalDateTime getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(LocalDateTime endTime) { this.endTime = endTime; }
+    public void setEndTime(String endTime) { this.endTime = endTime; }
 
     public Hall getHall() {
         return hall;
