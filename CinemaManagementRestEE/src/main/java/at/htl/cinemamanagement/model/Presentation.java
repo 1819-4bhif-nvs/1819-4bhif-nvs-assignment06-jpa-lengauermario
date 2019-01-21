@@ -1,9 +1,11 @@
 package at.htl.cinemamanagement.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlTransient;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -37,7 +39,8 @@ public class Presentation {
             cascade = CascadeType.REMOVE,
             fetch = FetchType.EAGER)
     @JoinTable(name = "ticket")
-    @JsonbTransient
+    @JsonIgnore
+    @XmlTransient
     private List<Customer> customers;
 
     public Presentation() {

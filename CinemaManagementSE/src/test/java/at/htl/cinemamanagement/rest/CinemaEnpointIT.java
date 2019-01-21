@@ -39,6 +39,8 @@ public class CinemaEnpointIT {
                 .add("founded", "2001-12-12")
                 .build();
 
+        System.err.println(cinemaJson.toString());
+
         this.target = client.target("http://localhost:8080/cinemamanagement/API/cinema/insert");
         Response response = this.target
                 .request(MediaType.APPLICATION_JSON)

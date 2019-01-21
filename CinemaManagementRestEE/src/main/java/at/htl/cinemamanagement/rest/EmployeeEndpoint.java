@@ -31,6 +31,7 @@ public class EmployeeEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     public Response add(Employee employee){
         entityManager.persist(employee);
+        System.err.println(employee.toString());
         return Response.ok().entity(employee).build();
     }
 

@@ -37,7 +37,7 @@ public class PresentationEndpointIT {
                     .add("cinema", Json.createObjectBuilder()
                             .add("name", "Cineplex Linz")
                             .add("address", "Prinz-Eugen-Weg 22, 4020 Linz")
-                            .add("inventionDate", "1999-12-08")
+                            .add("founded", "1999-12-08")
                     )
                 )
                 .add("movie", Json.createObjectBuilder()

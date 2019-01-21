@@ -1,8 +1,13 @@
 package at.htl.cinemamanagement.model;
 
 
+import at.htl.cinemamanagement.LocalDateConverter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -16,17 +21,20 @@ public class Cinema {
 
     private String name;
     private String address;
+    @XmlJavaTypeAdapter(LocalDateConverter.class)
     private LocalDate founded;
 
 
     @OneToMany(mappedBy = "cinema", fetch = FetchType.LAZY)
-    @JsonbTransient
+    @JsonIgnore
+    @XmlTransient
     private List<Hall> halls;
 
     @OneToMany(mappedBy = "cinema",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
-    @JsonbTransient
+    @JsonIgnore
+    @XmlTransient
     private List<Employee> employees;
 
     public Cinema() {

@@ -1,22 +1,31 @@
 package at.htl.cinemamanagement.model;
 
 
+import at.htl.cinemamanagement.LocalDateConverter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
 @Entity
 @NamedQuery(name = "Employee.findAll", query = "select e from Employee e")
+@XmlRootElement
 public class Employee extends Person{
 
     private double salary;
     private double personalNumber;
+    @XmlJavaTypeAdapter(LocalDateConverter.class)
     private LocalDate employedSince;
 
     @ManyToOne(cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
-    @JsonbTransient
+    @JsonIgnore
+    @XmlTransient
     private Cinema cinema;
 
     public Employee() {
@@ -59,7 +68,15 @@ public class Employee extends Person{
         return cinema;
     }
 
-    public void setCinema(Cinema cinema) {
-        this.cinema = cinema;
+    public void setCinema(Cinema cinema){this.cinema = cinema;}
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "salary=" + salary +
+                ", personalNumber=" + personalNumber +
+                ", employedSince=" + employedSince +
+                ", cinema=" + cinema +
+                '}';
     }
 }

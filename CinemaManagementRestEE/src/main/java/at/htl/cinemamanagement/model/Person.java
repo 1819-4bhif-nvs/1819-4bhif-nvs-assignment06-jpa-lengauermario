@@ -1,6 +1,9 @@
 package at.htl.cinemamanagement.model;
 
+import at.htl.cinemamanagement.LocalDateConverter;
+
 import javax.persistence.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
 @Entity
@@ -14,6 +17,7 @@ public class Person {
     private String firstName;
     private String lastName;
     private String address;
+    @XmlJavaTypeAdapter(LocalDateConverter.class)
     private LocalDate birthday;
     private String email;
     private String phoneNumber;

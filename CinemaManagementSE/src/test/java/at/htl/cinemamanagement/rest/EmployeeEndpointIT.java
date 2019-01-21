@@ -33,7 +33,7 @@ public class EmployeeEndpointIT {
                 .add("address", "Musterstraße 12, 5050 Musterstadt")
                 .add("birthday", "1973-12-16")
                 .add("email", "max.mustermann@muster.de")
-                .add("phonenumber", "+43 660665558808")
+                .add("phoneNumber", "+43 660665558808")
                 .add("cinema", Json.createObjectBuilder()
                         .add("name", "Cineplex Linz")
                         .add("address", "Prinz-Eugen-Straße 22, 4020 Linz")
@@ -46,8 +46,10 @@ public class EmployeeEndpointIT {
 
         this.target = client.target("http://localhost:8080/cinemamanagement/API/employee/insert");
         Response response = this.target
-                .request(MediaType.APPLICATION_JSON)
+                .request()
                 .post(Entity.json(employeeJson));
+
+        System.err.println(response);
 
         JsonObject entity = response.readEntity(JsonObject.class);
 
@@ -73,7 +75,7 @@ public class EmployeeEndpointIT {
                 .add("address", "Musterstraße 12, 5050 Musterstadt")
                 .add("birthday", "1973-12-16")
                 .add("email", "max.mustermann@muster.de")
-                .add("phonenumber", "+43 660665558808")
+                .add("phoneNumber", "+43 660665558808")
                 .add("cinema", Json.createObjectBuilder()
                         .add("name", "Cineplex Linz")
                         .add("address", "Prinz-Eugen-Straße 22, 4020 Linz")
